@@ -1,0 +1,10 @@
+
+<div class="gallery">
+    <div class="gallery__item" >
+        <ng-container *ngFor="let photo of photos">
+            <img (click)="getUrl(photo.url)" src="{{photo.url}}">
+        </ng-container>
+        
+    </div>
+    
+</div>

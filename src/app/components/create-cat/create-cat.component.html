@@ -1,0 +1,26 @@
+<h2 class="dialog-title mb-0 pb-0 text-center mb-3">Guardar gato</h2>
+    <div class="container-fluid mb-2 p-0">
+        <!--FECHAS DE INICIO Y DE FIN-->
+        <div class="align-self-center mb-2">
+            <h3 class="dialog-subtitle mb-0">Nombre:</h3>
+            <input type="text" class="form-control" [(ngModel)]="name">
+        </div>
+        <div class="align-self-center mb-2">
+            <h3 class="dialog-subtitle mb-0">Raza:</h3>
+            <input type="text" class="form-control" [(ngModel)]="breed">
+        </div>
+        <div class="align-self-center mb-2">
+            <h3 class="dialog-subtitle mb-0">Edad:</h3>
+            <input type="number" class="form-control" [(ngModel)]="age">
+        </div>
+        <div class="align-self-center mb-2">
+            <button mat-raised-button color="primary" class="mt-2 btn-block" (click)="openDialog()">Selecciona una foto</button>
+            {{photo_url}}
+        </div>
+        <!--BOTONES CREAR Y CANCELAR-->
+        <div class="d-flex justify-content-between mt-3">
+            <button mat-raised-button color="primary" class="btn-block" (click)="createCat()">Guardar</button>
+            <button mat-raised-button class="btn-block" style="visibility: hidden;">&nbsp;</button>
+            <button mat-raised-button color="basic" class="btn-block" routerLinkActive="active" [routerLink]="['/gatos']">Cancelar</button>
+        </div>
+    </div>

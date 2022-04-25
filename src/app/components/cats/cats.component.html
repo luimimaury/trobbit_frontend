@@ -1,0 +1,21 @@
+<button mat-button routerLinkActive="active" [routerLink]="['/crear']">Crear gato</button>
+<div class="px-5">
+    <div class="row">
+        <div *ngFor="let cat of cats" class=" col-3 mb-2 px-1">
+            <mat-card class="example-card ">
+                <img height="300" width="420" mat-card-cat src="{{cat.photo_url}}" alt="Photo of a Shiba Inu">
+                <mat-card-content>
+                    <p>
+                        Raza:<b> {{cat.breed}}</b> <br>
+                        Edad:<b> {{cat.age}} Año(s)</b> <br>
+                        Nombre:<b> {{cat.name}} </b>
+                    </p>
+                </mat-card-content>
+                <button class="w-50" mat-button routerLinkActive="active" [routerLink]="['/crear',cat]">Editar</button>
+                <button class="w-50" mat-button (click)="deleteCat(cat)">Eliminar</button>
+
+            </mat-card>
+        </div>
+    </div>
+    <br>
+</div>

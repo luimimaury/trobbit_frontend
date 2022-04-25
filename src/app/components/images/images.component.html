@@ -1,0 +1,21 @@
+<div class="container">
+    <div class="row">
+        <div *ngFor="let image of images | slice:0:5"class="col">
+            <mat-card class="example-card">
+                <img height="200" mat-card-image src="{{image.url}}" alt="Photo of a Shiba Inu">
+                  <button class="w-100" (click)="markAsFavorite(image.id)" mat-button>Agregar a favorito</button>
+              </mat-card>
+              <!-- {{image.url}} -->
+        </div>
+    </div>
+    <br>
+    <div class="row">
+        <div *ngFor="let image of images | slice:5:10" class="col">
+            <mat-card class="example-card">
+                <img height="200" mat-card-image src="{{image.url}}" alt="Photo of a Shiba Inu">
+                  <button class="w-100" (click)="markAsFavorite(image.id)" mat-button>Agregar a favorito</button>
+              </mat-card>
+            <!-- {{image.url}} -->
+        </div>
+    </div>
+</div>
